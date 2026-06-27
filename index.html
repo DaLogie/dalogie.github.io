@@ -9,30 +9,60 @@
             color: #222;
             margin: 0;
             padding: 0;
+            line-height: 1.5;
         }
 
         header {
             background-color: #1f2937;
             color: white;
-            padding: 40px;
+            padding: 45px 20px;
             text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 34px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #111827;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         section {
             background-color: white;
             margin: 25px auto;
-            padding: 25px;
-            max-width: 900px;
+            padding: 28px;
+            max-width: 950px;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            margin-bottom: 10px;
-        }
-
         h2 {
             color: #1f2937;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #374151;
+            margin-bottom: 8px;
         }
 
         a {
@@ -45,9 +75,26 @@
             text-decoration: underline;
         }
 
+        ul {
+            margin-top: 8px;
+        }
+
+        .artifact-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 18px;
+            background-color: #f9fafb;
+        }
+
+        .small-note {
+            color: #555;
+            font-size: 14px;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             color: #555;
         }
     </style>
@@ -59,20 +106,120 @@
         <p>Computer Science Capstone Portfolio</p>
     </header>
 
-    <section>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#goals">Goals</a>
+        <a href="#code-review">Code Review</a>
+        <a href="#enhancements">Enhancements</a>
+        <a href="#self-assessment">Self-Assessment</a>
+    </nav>
+
+    <section id="about">
         <h2>About Me</h2>
         <p>
             I am currently a Mechanical Engineer for Microsoft and have been in the Computer Science program for about three years.
-            This ePortfolio will be used to organize and display my capstone work and demonstrate the skills I have developed throughout the program.
+            This ePortfolio organizes and displays my capstone work and demonstrates the skills I have developed throughout the program.
         </p>
     </section>
 
-    <section>
+    <section id="goals">
         <h2>Professional Goals</h2>
         <p>
             My goal is to continue building my skills in programming, problem-solving, automation, controls, and technology.
-            I want to use my computer science background to become a more well-rounded engineer who can understand both physical systems and the technology that supports them.
+            I want to use my computer science background to become a more well-rounded engineer who can understand both physical systems
+            and the technology that supports them. Combining mechanical engineering experience with computer science knowledge helps me
+            approach problems from more than one technical perspective.
         </p>
+    </section>
+
+    <section id="code-review">
+        <h2>Code Review</h2>
+        <p>
+            My code review explains the original Travlr application, the areas I planned to improve, and how each enhancement connects
+            to the course outcomes. The review focuses on software engineering and design, algorithms and data structures, and databases.
+        </p>
+
+        <ul>
+            <li><a href="code-review/code-review-video-link.txt">Code Review Video Link</a></li>
+        </ul>
+
+        <p class="small-note">
+            This section includes the code review completed before the enhancement work.
+        </p>
+    </section>
+
+    <section id="enhancements">
+        <h2>Capstone Enhancements</h2>
+        <p>
+            For my capstone project, I enhanced the Travlr full-stack web application across three areas:
+            software engineering and design, algorithms and data structures, and databases. Since the same application was used for each
+            enhancement, the original artifact files are provided once and referenced throughout the portfolio.
+        </p>
+
+        <div class="artifact-card">
+            <h3>Original Artifact: Travlr Full-Stack Application</h3>
+            <p>
+                The original artifact is the Travlr full-stack web application. It includes an Angular admin interface, backend API logic,
+                and a database model for storing trip records. This original artifact was used as the starting point for all three enhancements.
+            </p>
+            <ul>
+                <li><a href="artifacts/original-artifact.zip">Original Travlr Artifact Files</a></li>
+            </ul>
+        </div>
+
+        <div class="artifact-card">
+            <h3>Enhancement One: Software Engineering and Design</h3>
+            <p>
+                This enhancement focused on improving the Travlr admin trip management workflow. I improved the edit trip process,
+                updated the form layout, added clearer validation feedback, and changed the edit workflow to use route parameters
+                instead of local storage. These changes improved the usability, maintainability, and structure of the admin side of the application.
+            </p>
+            <ul>
+                <li><a href="artifacts/original-artifact.zip">Original Artifact Files</a></li>
+                <li><a href="artifacts/software-design-enhanced.zip">Enhanced Software Design Files</a></li>
+                <li><a href="narratives/software-design-narrative.pdf">Software Engineering and Design Narrative</a></li>
+            </ul>
+        </div>
+
+        <div class="artifact-card">
+            <h3>Enhancement Two: Algorithms and Data Structures</h3>
+            <p>
+                This enhancement focused on improving how trip records are processed and displayed. I added search and sorting functionality
+                so users can search by trip name, resort, or trip code and sort trips by price, name, or date. This enhancement demonstrates
+                the use of arrays, filtering logic, conditional logic, comparison operations, and sorting.
+            </p>
+            <ul>
+                <li><a href="artifacts/original-artifact.zip">Original Artifact Files</a></li>
+                <li><a href="artifacts/algorithms-enhanced.zip">Enhanced Algorithms and Data Structures Files</a></li>
+                <li><a href="narratives/algorithms-narrative.pdf">Algorithms and Data Structures Narrative</a></li>
+            </ul>
+        </div>
+
+        <div class="artifact-card">
+            <h3>Enhancement Three: Databases</h3>
+            <p>
+                This enhancement focused on improving the database layer of the Travlr application. I strengthened the Mongoose schema,
+                improved validation, changed the price field from a string to a number, improved backend error handling, and aligned the
+                frontend model with the backend schema. These changes improved data integrity and made the application more reliable.
+            </p>
+            <ul>
+                <li><a href="artifacts/original-artifact.zip">Original Artifact Files</a></li>
+                <li><a href="artifacts/databases-enhanced.zip">Enhanced Database Files</a></li>
+                <li><a href="narratives/database-narrative.pdf">Database Narrative</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="self-assessment">
+        <h2>Professional Self-Assessment</h2>
+        <p>
+            My professional self-assessment reflects on my growth throughout the Computer Science program and explains how this ePortfolio
+            demonstrates my skills in software design, algorithms and data structures, databases, communication, and problem-solving.
+        </p>
+
+        <ul>
+            <li><a href="self-assessment/professional-self-assessment.pdf">Professional Self-Assessment</a></li>
+        </ul>
     </section>
 
     <footer>
